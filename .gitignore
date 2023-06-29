@@ -1,0 +1,15 @@
+# Ignore the node_modules folder
+**/node_modules/
+
+# Ignore the .eslintrc.js file
+**/.eslintrc.js
+
+# Ignore the babel.config.js file
+**/babel.config.js
+
+# Ignore the package-lock.json file
+**/package-lock.json
+
+# Ignore the package.json file (if you don't want to track dependencies)
+**/package.json
+
