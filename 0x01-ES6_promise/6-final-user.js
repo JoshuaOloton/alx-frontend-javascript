@@ -9,7 +9,7 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
       for (const result of results) {
         arr.push({
           status: result.status,
-          value: result.status === 'fulfilled' ? result.value : result.status,
+          value: result.status === 'fulfilled' ? result.value : result.reason,
         });
       }
       return arr;
