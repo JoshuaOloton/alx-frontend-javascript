@@ -3,15 +3,15 @@ import uploadPhoto from './5-photo-reject';
 
 export default function handleProfileSignup(firstName, lastName, fileName) {
   const promisesArr = [signUpUser(firstName, lastName), uploadPhoto(fileName)];
-  const arr = [];
   return Promise.allSettled(promisesArr)
-    .then((results) => {
+  .then((results) => {
+      const arr = [];
       for (const result of results) {
         arr.push({
           status: result.status,
-          value: result.status === 'fulfilled' ? result.value : result.reason,
+          value: result.value === null ? result.reason.tostring() : result.value,
         });
       }
       return arr;
-    });
+  });
 }
