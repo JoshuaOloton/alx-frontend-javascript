@@ -1,4 +1,5 @@
 /* eslint no-underscore-dangle: 0 */
+/* eslint class-methods-use-this: 0 */
 import Car from './10-car';
 
 export default class EVCar extends Car {
@@ -11,7 +12,7 @@ export default class EVCar extends Car {
     return this._range;
   }
 
-  static cloneCar() {
+  cloneCar() {
     return new Car();
   }
 }
